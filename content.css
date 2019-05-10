@@ -1,0 +1,67 @@
+#gdx-bubble-main {
+	background-color: #eee;
+	z-index: 99997
+}
+
+* {
+	box-sizing: border-box
+}
+
+.display-none {
+	display: none!important
+}
+
+#gdx-bubble-main {
+	border: 1px solid #999;
+	border-radius: 4px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	color: #222;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: normal;
+	padding: 9px;
+	position: absolute;
+	width: 60px
+}
+
+#gdx-bubble-main:after {
+	clear: both;
+	content: "";
+	display: table
+}
+
+#gdx-bubble-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 16px;
+	height: 16px;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAATCAIAAAAWBRqYAAAAA3NCSVQICAjb4U/gAAAAEHRFWHRTb2Z0d2FyZQBTaHV0dGVyY4LQCQAAAO5JREFUKM/VksGKwjAQhkc72G3jXaRbi6mQp9kH8Al9gH0XL22p2ahdvOnYS01wD4HoBi9FPDinMMxP5vuYwfVaQZ8aQs96fQDda7X6ZizK85kQHBEBwBgj5W69Lona5fLLDzAWaW32+wMiLhYZANS1Uqrpugtj0YMfhOBKNUStlDvb2W5/T6fzeBxnWeLGBk6r1rqqfpRqjkcKwxEAdN0ljj/SdOqW/AdtN+E8DcMRUUvUIgbe9HOWjDEe5b2DIAj8QFlKj/LegRDcDxTFxlImySTPZ7ZpHRTFxgVuDB6l3WQ+/7QOHmh932vtHfgDL2iEeKa1tNEAAAAASUVORK5CYII=');
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	opacity: 0.35
+}
+
+#gdx-bubble-close:hover {
+	opacity: 0.8
+}
+
+#gdx-bubble-query-row {
+	margin-bottom: 9px
+}
+
+#gdx-bubble-query {
+	display: inline-block;
+	height: 20px;
+	vertical-align: top
+}
+
+#gdx-bubble-query {
+	font-size: 16px;
+	font-weight: bold
+}
+
+.nytd_selection_button {
+	display: none
+}
