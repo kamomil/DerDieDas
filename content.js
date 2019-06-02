@@ -22,7 +22,16 @@
                         b = document.createElement("div");
                         this.b = b.cloneNode(!1);
                         this.b.id = "gdx-bubble-host";
-                        this.D = this.b.createShadowRoot ? this.b.createShadowRoot() : this.b.webkitCreateShadowRoot();
+                        if(this.b.createShadowRoot) {
+                            console.log("using createShadowRoot");
+                            this.D = this.b.createShadowRoot();
+                        } else if(this.b.webkitCreateShadowRoot){
+                            console.log("using webkitCreateShadowRoot");
+                            this.D = this.b.webkitCreateShadowRoot();
+                        } else {
+                            console.log("using attachShadow");
+                            this.D = this.b.attachShadow({mode: 'open'});
+                        }
                         var f = document.createElement("style");
                         f.innerHTML = this.J;
                         this.D.appendChild(f);
