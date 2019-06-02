@@ -12,9 +12,9 @@
         },
         //upon extension load, call the callback that initialize the bubble -set all the areas
         initialize_listener = function(a, b, c) {
-            "initialize" === a.type && c({
-                instanceId: t++
-            })
+            console.log("background: initialize")
+            if("initialize" === a.type)
+                c({instanceId: t++})
         },
 
         query_listener = function(a, b, c) {
