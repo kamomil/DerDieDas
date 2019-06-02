@@ -42,13 +42,14 @@
       r();
     }
   }, false);
-  chrome.tabs.query({
+  chrome.tabs.query({//get the tab of which that word was double clicked
     active : true,
     currentWindow : true
-  }, function(a) {
-    if (a.length) {
-      console.assert(1 === a.length);
-      chrome.tabs.sendMessage(a[0].id, {
+  }, function(orig_tabs) {
+    if (orig_tabs.length) {
+    //we suppose to get just one active tab - the current active tab
+      console.assert(1 === orig_tabs.length);
+      chrome.tabs.sendMessage(orig_tabs[0].id, {
         type : "get_selection"
       }, function(doc) {
         if (doc && doc.selection) {
