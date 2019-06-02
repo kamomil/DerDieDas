@@ -26,5 +26,9 @@
    "permissions": ["tabs"],
 
    "version": "0.0.1",
-   "web_accessible_resources": [ "content.css" ]
+   "web_accessible_resources": [ "content.css" ],
+
+   "permissions": [
+      "https://de.wiktionary.org/"
+   ]
 }
