@@ -16,6 +16,7 @@
             u(chrome.runtime.getURL("content.css"),
                 function(a) {
                     var b = function(b) {
+                        console.log('in b func')
                         this.K = b.instanceId;
                         this.J = a;
                         b = document.createElement("div");
@@ -68,8 +69,7 @@
                 a.preventDefault();
                 a.stopPropagation()
             };
-            a.w.onmousedown =
-                b;
+            a.w.onmousedown = b;
             chrome.runtime.onMessage.addListener(D);
             chrome.runtime.onMessage.addListener(a.G)
         },
@@ -198,6 +198,7 @@
     };
     var M = M || !1;
     if (!M) {
+        console.log("content.js: not M")
         if (window.gdxBubbleInstance) {
             var N = window.gdxBubbleInstance;
             chrome.runtime.onMessage.removeListener(D);
@@ -206,5 +207,5 @@
             N.j()
         }
         window.gdxBubbleInstance = new y
-    } else {console.log("M already exist")};
+    } else {console.log("content.js: M already exist")};
 })();
