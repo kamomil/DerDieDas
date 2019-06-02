@@ -23,12 +23,8 @@
    },
    "manifest_version": 2,
    "name": "דרדס",
-   "permissions": ["tabs"],
+   "permissions": ["tabs","https://de.wiktionary.org/"],
 
    "version": "0.0.1",
-   "web_accessible_resources": [ "content.css" ],
-
-   "permissions": [
-      "https://de.wiktionary.org/"
-   ]
+   "web_accessible_resources": [ "content.css" ]
 }
